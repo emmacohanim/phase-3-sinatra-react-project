@@ -4,6 +4,9 @@ source "https://rubygems.org"
 # https://github.com/sinatra/sinatra
 gem "sinatra", "~> 2.1"
 
+gem "rest-client"
+
+
 # A fast and simple web server
 # https://github.com/macournoyer/thin
 gem "thin", "~> 1.8"
@@ -37,7 +40,7 @@ gem "require_all", "~> 3.0"
 # These gems will only be used when we are running the application locally
 group :development do
   gem "pry", "~> 0.14.1"
-
+  gem "dotenv"
   # Automatically reload when there are changes
   # https://github.com/alexch/rerun
   gem "rerun"
@@ -49,4 +52,5 @@ group :test do
   gem "rack-test", "~> 1.1"
   gem "rspec", "~> 3.10"
   gem "rspec-json_expectations", "~> 2.2"
+
 end
