@@ -1,6 +1,6 @@
-class CreateSongArray < ActiveRecord::Migration[6.1]
+class CreateSongs < ActiveRecord::Migration[6.1]
   def change
-    create_table :song_arrays do |t|
+    create_table :songs do |t|
       t.string :title
       t.string :artist
       t.string :album

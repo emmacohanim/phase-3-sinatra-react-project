@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_15_012610) do
+ActiveRecord::Schema.define(version: 2022_09_15_180125) do
 
   create_table "playlists", force: :cascade do |t|
     t.string "title"
+    t.integer "user_id"
   end
 
-  create_table "song_arrays", force: :cascade do |t|
+  create_table "song_playlists", force: :cascade do |t|
+    t.integer "song_id"
+    t.integer "playlist_id"
+  end
+
+  create_table "songs", force: :cascade do |t|
     t.string "title"
     t.string "artist"
     t.string "album"
